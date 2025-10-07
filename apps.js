@@ -29,3 +29,15 @@ app.get('/api/lowstock', async (req, res) => {
 });
 
 app.listen(3000, () => console.log('API running on port 3000'));
+
+const { data, error } = await supabase
+  .from("medications")
+  .insert([
+    { 
+      med_name: name, 
+      category, 
+      stock, 
+      expiry_date, 
+      supplier 
+    }
+  ]);
