@@ -5,7 +5,16 @@
   <h2>Monthly Medication Usage</h2>
   <canvas id="usageChart" width="600" height="300"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css" />
   <script>
+    <nav class="navbar">
+    <div class="nav-logo">MedTrack</div>
+    <ul class="nav-links">
+      <li><a href="index.html">index</a></li>
+      <li><a href="#">Medication</a></li>
+      </ul>
+      </nav>
+
     // sample data - replace with fetch('/api/usage')
     const labels = ['Jan','Feb','Mar','Apr','May','Jun'];
     const data = [120, 150, 100, 170, 130, 160];
