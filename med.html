@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Med Dashboard</title></head>
+<body>
+  <h2>Monthly Medication Usage</h2>
+  <canvas id="usageChart" width="600" height="300"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // sample data - replace with fetch('/api/usage')
+    const labels = ['Jan','Feb','Mar','Apr','May','Jun'];
+    const data = [120, 150, 100, 170, 130, 160];
+
+    const ctx = document.getElementById('usageChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{ label: 'Units dispensed', data: data }]
+      },
+      options: { responsive: true }
+    });
+  </script>
+</body>
+</html>
